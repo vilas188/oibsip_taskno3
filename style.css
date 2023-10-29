@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg,rgba(245, 240, 242, 1) 0%,rgb(97, 97, 183) 100%, rgba(0, 212, 255, 1) 100%);
+    font-family: monospace, sans-serif;
+    color: #0d5370;
+
+}
+
+.container {
+    font-family: 'Courier New', Courier, monospace;
+    background: rgba(0, 255, 247, 0.081);
+    padding: 20px;
+    border-radius:20px;
+    box-shadow: 0 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 85%;
+    max-width: 800px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    font-size: 32px;
+    position: relative;
+    color: black;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: #333;
+    transition: all ease 1s;
+}
+h1:hover::after{
+    width: 100%;
+}
+
+.temp-container {
+    width: 100%;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input {
+    width: 60%;
+    font-family: monospace;
+    padding: 5px;
+    outline: none;
+    background:#333;
+    border-color: rgba(255, 255, 255, 0.6);
+    color: white;
+    font-size: 18px;
+}
+
+input::placeholder {
+    color: white;
+}
+
+
+@media (min-width: 600px) {
+    .container {
+        width: 70%;
+    }
+
+    input {
+        width: 50%;
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        width: 60%;
+    }
+
+    input {
+        width: 40%;
+    }
+}
